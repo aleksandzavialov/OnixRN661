@@ -3,8 +3,8 @@ echo "start watch dell all <==============="
 watchman watch-del-all
 echo "start delete node modules, .lock files <==============="
 sudo rm -rf node_modules \
-#&& sudo rm -rf package-lock.json \
-#&& sudo rm -rf yarn.lock
+&& sudo rm -rf package-lock.json \
+&& sudo rm -rf yarn.lock
 echo "clean android build <==============="
 cd android \
 && sudo rm -rf app/build \
@@ -19,10 +19,10 @@ cd ios \
 && sudo rm -rf build \
 && cd ..
 echo "start install RN-modules and POD-modules"
-#npm install --legacy-peer-deps \
-#&& cd ios \
-#&& pod install \
-#&& cd ..
+npm install --legacy-peer-deps \
+&& cd ios \
+&& pod install \
+&& cd ..
 echo "start project on ios   <==============="
 #react-native run-android --variant=variant --appIdSuffix suffix
 #react-native run-ios --scheme Scheme
